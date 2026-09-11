@@ -1,6 +1,6 @@
 # 最新稳定版本站下载
 
-网站不需要数据库。安装包存入专用 Cloudflare R2 桶，使用自定义下载域名。代码已经接入每天北京时间 08:23 的同步任务；目前未提供 R2 配置，因此还没有真实本站下载文件。
+网站不需要数据库。安装包存入专用 Cloudflare R2 桶 `clashparty-downloads`，使用 `https://download.clashparty.online` 下载域名。已接入每天北京时间 08:23 的同步任务；凭据保存在本站 GitHub 仓库的 Actions Secrets 中。首次任务完成并部署后，下载中心才会显示经核验的本站下载入口。
 
 ## 一次性配置
 

@@ -100,13 +100,13 @@ def main():
     manifest={'version':release['version'],'assets':entries}
     origin=json.loads(Path('content/site.json').read_text(encoding='utf-8-sig'))['origin']
     def verify(entry):
-        with urllib.request.urlopen(urllib.request.Request(base+'/'+entry['key'],headers={'Origin':origin},method='HEAD'),timeout=60) as response:
+        with urllib.request.urlopen(urllib.request.Request(base+'/'+entry['key'],headers={'Origin':origin,'User-Agent':'clashparty-online-mirror'},method='HEAD'),timeout=60) as response:
             if int(response.headers.get('Content-Length','-1'))!=entry['size']:
                 raise ValueError('Public file verification failed')
             if response.headers.get('Access-Control-Allow-Origin') not in (origin,'*'):
                 raise ValueError('Configure bucket CORS before publishing')
     publish(client,bucket,manifest,verify)
-    with urllib.request.urlopen(urllib.request.Request(base+'/'+PREFIX+'latest.json',headers={'Origin':origin}),timeout=60) as response:
+    with urllib.request.urlopen(urllib.request.Request(base+'/'+PREFIX+'latest.json',headers={'Origin':origin,'User-Agent':'clashparty-online-mirror'}),timeout=60) as response:
         if json.load(response)!=manifest: raise ValueError('Public manifest stale; no old files deleted')
         if response.headers.get('Access-Control-Allow-Origin') not in (origin,'*'):
             raise ValueError('Manifest CORS check failed; no old files deleted')

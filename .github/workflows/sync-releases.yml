@@ -34,7 +34,7 @@ jobs:
       - run: npm run check
       - run: python -m unittest discover -s scripts -p 'test_mirror.py'
       - name: Synchronize latest stable downloads
-        run: python scripts/sync-mirror.py
+        run: python -u scripts/sync-mirror.py
         env:
           R2_MIRROR_ENABLED: ${{ vars.R2_MIRROR_ENABLED }}
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}

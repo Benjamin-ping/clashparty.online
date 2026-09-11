@@ -206,7 +206,7 @@ const issues = [
   '没有备份时不要直接清空配置目录；保留日志和配置副本帮助后续定位。','manual/backup']
 ];
 for(const [slug,title,desc,checks,_recovery,related] of issues) add('troubleshoot',slug,title,desc,[
- ['按顺序检查',steps(checks)],['试过以上方法，还是不能用怎么办？',p('可以按问题类型选择求助方式：')+list([...(slug==='import'||slug==='timeout'||slug==='slow'?['订阅无法下载、套餐状态异常或节点无法使用：先联系服务商客服，请对方检查订阅和节点。']:[]),'Clash Party 出现报错、打不开或操作异常：点击下方「到 GitHub 查找或反馈问题」，先搜索相同的报错；没有对应问题时，再提交你的情况。','想请其他读者帮忙：评论开放后，可以在下方「交流与解决方法」留言。'])+p('求助时说明你用的系统（例如 Windows 11）、Clash Party 版本、在哪一步出错、屏幕上的报错文字，以及已经试过哪些方法。不要公开完整订阅链接或密码。')+p(link(related,'再看一遍相关操作步骤')+' · <a href="https://github.com/mihomo-party-org/clash-party/issues" target="_blank" rel="noopener noreferrer">到 GitHub 查找或反馈问题 ↗</a>')]
+ ['按顺序检查',steps(checks)],['试过以上方法，还是不能用怎么办？',p('可以按问题类型选择求助方式：')+list([...(slug==='import'||slug==='timeout'||slug==='slow'?['订阅无法下载、套餐状态异常或节点无法使用：先联系服务商客服，请对方检查订阅和节点。']:[]),'Clash Party 出现报错、打不开或操作异常：点击下方「到 GitHub 查找或反馈问题」，先搜索相同的报错；没有对应问题时，再提交你的情况。','想请其他读者帮忙：可以在下方「交流与解决方法」用 GitHub 账号登录留言。'])+p('求助时说明你用的系统（例如 Windows 11）、Clash Party 版本、在哪一步出错、屏幕上的报错文字，以及已经试过哪些方法。不要公开完整订阅链接或密码。')+p(link(related,'再看一遍相关操作步骤')+' · <a href="https://github.com/mihomo-party-org/clash-party/issues" target="_blank" rel="noopener noreferrer">到 GitHub 查找或反馈问题 ↗</a>')]
 ]);
 
 const importArticle = articles.find(a=>a.path==='/troubleshoot/import/');
@@ -214,3 +214,4 @@ importArticle.sections.splice(1,0,{id:'subscription-checker',title:'订阅格式
 
 const portArticle = articles.find(a=>a.path==='/troubleshoot/port/');
 portArticle.sections.splice(1,0,{id:'change-port',title:'怎么修改端口？',html:p('下面以混合端口 7890 被占用为例。你看到的端口可能不同，要以自己的设置和报错为准。')+steps(['<strong>打开「内核设置」。</strong>点击 Clash Party 左侧的「内核设置」，找到「混合端口」「Socks 端口」和「Http 端口」。','<strong>找到报错对应的端口。</strong>例如日志提示 7890 被占用，而「混合端口」正好是 7890，就修改混合端口。不要把三个端口都改成同一个数字。','<strong>记下原值，再输入新端口。</strong>例如将混合端口从 7890 改成 17890。17890 只是示例，也可能被其他程序占用；如果仍提示占用，可以再试 17891。使用 1024～65535 之间的数字，并与其他已启用的端口区分开。','<strong>确认修改生效。</strong>输入后，若出现「保存」或「确认」按钮就点击。离开设置页再回来，确认数字已变成新值；然后退出并重新打开 Clash Party，检查是否还报端口占用。','<strong>重新开关一次「系统代理」。</strong>先关闭再打开，让电脑重新使用 Clash Party 的代理设置。重新打开浏览器，测试网站能否访问。','<strong>其他应用手动填过代理地址，也要一起改。</strong>例如原来填写 127.0.0.1:7890，而混合端口改成了 17890，就将该应用中的端口同步改为 17890，地址仍是 127.0.0.1。没有手动设置过的应用可以跳过。'])+img('kernel','在「内核设置」中找到与报错对应的端口，修改后确认新数字已保存')+note('如果报错的是 Socks 或 Http 端口，就修改对应项；若报错的是其他端口，不要照搬混合端口的示例。修改后仍然异常时，保留完整报错再继续排查，不要反复修改所有端口。')});
+
