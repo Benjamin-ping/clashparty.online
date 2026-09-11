@@ -3,6 +3,13 @@
   "origin": "https://clashparty.online",
   "contentDate": "2026-09-10",
   "guideVersion": "2.0.2",
-  "repositoryUrl": "",
-  "feedbackUrl": "", "comments": { "enabled": false, "repo": "", "repoId": "", "category": "", "categoryId": "" }
+  "repositoryUrl": "https://github.com/Benjamin-ping/clashparty.online",
+  "feedbackUrl": "",
+  "comments": {
+    "enabled": true,
+    "repo": "Benjamin-ping/clashparty.online",
+    "repoId": "R_kgDOUWYX2g",
+    "category": "Announcements",
+    "categoryId": "DIC_kwDOUWYX2s4DFXOL"
+  }
 }
