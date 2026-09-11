@@ -8,7 +8,7 @@ if(configElement?.dataset.mirrorBase){
       for(const card of document.querySelectorAll('[data-mirror-name]')){
         const entry=manifest.assets.find(a=>a.name===card.dataset.mirrorName);
         if(!entry||!/^clashparty-mirror\/[\w.-]+\/[a-f0-9]{64}\/clash-party-[\w.-]+$/.test(entry.key)||entry.key.split('/').at(-1)!==entry.name)return;
-        const link=document.createElement('a');link.className='download-link';link.href=base+'/'+entry.key;link.textContent='本站下载 ↗';link.rel='noopener noreferrer';link.target='_blank';
+        const link=document.createElement('a');link.className='download-link download-link-primary';link.href=base+'/'+entry.key;link.textContent='本站下载 ↗';link.rel='noopener noreferrer';link.target='_blank';
         card.querySelector('.download-link').parentElement.prepend(link);
       }
     }).catch(()=>{/* Official links remain available if the mirror cannot be reached. */});
