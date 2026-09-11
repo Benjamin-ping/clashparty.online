@@ -12,12 +12,32 @@ const img = (name,caption) => `<figure><a href="/assets/screenshots/${name}.png"
 const code = text => `<pre><code>${text}</code></pre>`;
 const link = (path,text) => `<a href="/${path}/">${text}</a>`;
 export const articles = [];
-const globalTesting = ['全局模式：GLOBAL 测速异常怎么办',p('在全局模式下，如果 GLOBAL 测试延迟失败或一直显示超时，可以按下面的顺序检查。这里的“机场名称组”指订阅提供的代理组，实际名称可能是服务商名称，也可能是“节点选择”等。')+steps(['先进入「代理组」，找到写着机场名字的那个组并展开。','先测试这个组里的节点，等待延迟结果，选择一个可用的实际节点。不要把剩余流量、到期时间等提示条目当成出口。','再返回 GLOBAL，确认它选择了刚才的代理组或一个可用节点，而不是 DIRECT 或 REJECT。','重新测试 GLOBAL，再访问目标网站验证实际连接。'])+note('先测机场名称组，再测 GLOBAL，是针对这类配置的排查顺序，不是所有订阅的强制规则。若没有该组，直接测试实际节点；若该组所有节点也超时，继续检查订阅状态、本地网络和测试目标。REJECT 本来用于拒绝连接，它超时不代表节点故障。')+p(link('troubleshoot/timeout','节点超时的完整排查方法'))];
+const globalTesting = ['切了节点却没生效？先看模式和代理组',
+  p('有时不是节点不能用，而是切错了组：开着规则模式，却一直在 GLOBAL 里切节点；开着全局模式，却只在机场名称组里切节点。先看当前模式，再找到这个网站真正使用的组。这里的“机场名称组”也可能叫“节点选择”或其他名字，以你的订阅为准。')+
+  '<h3>规则模式：去网站对应的组里选</h3>'+steps([
+    '先确认当前选择的是「规则」模式。不同网站可以使用不同的组，通常只修改 GLOBAL，不会改变规则模式下这个网站使用的节点。',
+    '打开「代理组」。如果有 ChatGPT、OpenAI 或 AI 这样的专用组，先查看它选中了什么；没有专用组时，查看「节点选择」或机场名称组。组名只是线索，最终以实际连接为准。',
+    '如果 ChatGPT 组选的是某个实际节点，就在这个组里换节点；如果它选的是「机场名称组」，再进入机场名称组换节点。例如：ChatGPT → 机场名称组 → 节点 A，此时换机场名称组里的节点才会影响这条连接。'
+  ])+
+  '<h3>全局模式：先看 GLOBAL 选中了什么</h3>'+steps([
+    '切到「全局」模式后，打开 GLOBAL。想使用代理时，应选可用节点或代理组，不要选 DIRECT（直连）或 REJECT（拒绝连接）。',
+    '如果 GLOBAL 直接选的是「节点 A」，就要在 GLOBAL 里切换。此时去机场名称组里选「节点 B」，不会改变 GLOBAL 仍在使用节点 A 的情况。',
+    '如果 GLOBAL 选的是「机场名称组」，再进入那个组选择节点。例如：GLOBAL → 机场名称组 → 节点 B，这时在机场名称组里换节点才会生效。若中间还有其他组，就继续看它选了什么，直到找到实际节点。'
+  ])+
+  '<h3>一直切节点，ChatGPT 还是打不开？</h3>'+steps([
+    '先按上面的方法确认自己改的是正在使用的组，不要只看哪个节点被点亮了。',
+    '切换后，完全退出并重新打开浏览器或 ChatGPT 应用，再访问一次，避免继续使用切换前已经建立的连接。',
+    '打开 Clash Party 的「连接」页面，找到刚刚访问 ChatGPT 的连接，查看详情中的代理组和最终节点。若仍是原节点，说明这次切换没有影响该连接；若显示 DIRECT，说明这条连接走了直连。没有相关连接时，先按下方教程检查应用是否经过 Clash Party。',
+    '确认实际节点已经变化后，再看具体提示。节点有延迟数字，只代表测速地址能连接，不等于 ChatGPT 一定能用。把“超时”“访问被拒绝”或其他完整报错记下来，再联系服务商确认节点情况；不要仅凭在无关组里切了几次，就判断所有节点都不支持 ChatGPT。'
+  ])+
+  '<h3>GLOBAL 测速超时怎么检查？</h3>'+p('先看 GLOBAL 选的是节点还是代理组。选节点就测试该节点；选代理组就进入该组，测试并选中一个可用节点，再回到 GLOBAL 测试。不要选择“剩余流量”“到期时间”等提示条目。')+
+  note('各个组不是一起切换的：你修改的组，必须在当前连接实际使用的路径上才会生效。订阅可以自定义分组和规则，不能只凭组名判断。REJECT 用于拒绝连接，它测速超时不代表节点故障。')+
+  p(link('troubleshoot/timeout','节点超时的完整排查方法')+' · '+link('troubleshoot/apps','浏览器能用，其他应用不能用'))];
 function add(group,slug,title,description,sections,extra={}) {
   const content=[...sections];
   if((group==='guide'&&slug==='windows')||(group==='manual'&&['groups','modes'].includes(slug))||(group==='troubleshoot'&&slug==='timeout')) {
     const before=content.findIndex(([heading])=>heading==='更新、退出与卸载');
-    const section=group==='troubleshoot'?[globalTesting[0],p('如果 GLOBAL 测速失败或一直超时，可以先测试机场名称对应的代理组，再测试 GLOBAL。')+p('<a href="/manual/modes/#global-testing">查看 GLOBAL 测速异常的完整排查步骤 →</a>')]:globalTesting;
+    const section=group==='troubleshoot'?[globalTesting[0],p('规则模式下只改 GLOBAL，或全局模式下只改未被 GLOBAL 选中的机场名称组，都可能让你切了节点却没有生效。遇到 ChatGPT 一直打不开、GLOBAL 测速超时，先确认当前连接真正使用的组和节点。')+p('<a href="/manual/modes/#global-testing">查看模式、选节点与 ChatGPT 连接的排查步骤 →</a>')]:globalTesting;
     content.splice(before<0?content.length:before,0,section);
   }
   articles.push({group,slug,path:`/${group}/${slug}/`,title,description,sections:content.map(([title,html],i)=>({id:((group==='manual'&&slug==='modes')||(group==='troubleshoot'&&slug==='timeout'))&&title===globalTesting[0]?'global-testing':`section-${i+1}`,title,html})),...extra});
