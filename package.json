@@ -11,9 +11,10 @@
     "dev": "node scripts/serve.mjs",
     "preview": "node scripts/serve.mjs",
     "check": "node scripts/check.mjs",
-    "test": "node --test scripts/releases.test.mjs",
+    "test": "node --test scripts/releases.test.mjs scripts/seo.test.mjs",
     "sync:releases": "node scripts/sync-releases.mjs",
-    "deploy": "npm run build && npm run check && wrangler deploy"
+    "deploy": "npm run build && npm run check && wrangler deploy && npm run indexnow",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "devDependencies": {
     "wrangler": "^4.131.0"

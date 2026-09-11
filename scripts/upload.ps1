@@ -87,6 +87,8 @@ try {
         Write-Host "`n[5/5] 发布到 clashparty.online……" -ForegroundColor Cyan
         & npx.cmd --no-install wrangler deploy
         if ($LASTEXITCODE -ne 0) { throw 'GitHub 已上传，但网站发布失败。请查看上方错误；处理后可重新运行。' }
+        Write-Host '通知 IndexNow 抓取网站……'
+        Run-Npm -Arguments @('run', 'indexnow')
     }
     Write-Host "`n完成！GitHub 已更新。" -ForegroundColor Green
     if (-not $SkipDeploy) { Write-Host '网站已发布：https://clashparty.online/' -ForegroundColor Green }

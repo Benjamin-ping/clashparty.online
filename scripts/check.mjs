@@ -17,5 +17,14 @@ for(const file of htmls){const text=await fs.readFile(file,'utf8');if(!/<html la
 }
 const search=JSON.parse(await fs.readFile(path.join(root,'search-index.json'),'utf8'));
 for(const entry of search){if(!entry.title||!entry.path||!entry.description)errors.push('Incomplete search entry');}
+const sitemap=await fs.readFile(path.join(root,'sitemap.xml'),'utf8');
+if((sitemap.match(/<loc>/g)||[]).length!==search.length)errors.push('Sitemap and search page counts differ');
+for(const entry of search){
+ const html=await fs.readFile(path.join(root,entry.path.slice(1),'index.html'),'utf8');
+ const schema=html.match(/<script type="application\/ld\+json">(.*?)<\/script>/);
+ try{if(!schema||!JSON.parse(schema[1])['@graph']?.length)throw Error();}catch{errors.push(`${entry.path}: invalid structured data`);}
+ if(!html.includes('<link rel="canonical"')||!html.includes('<meta name="description"'))errors.push(`${entry.path}: missing SEO metadata`);
+}
+if(!/name="robots" content="noindex,follow"/.test(await fs.readFile(path.join(root,'404.html'),'utf8')))errors.push('404 must not be indexed');
 if(errors.length){console.error(errors.join('\n'));process.exit(1);}
 console.log(`OK: ${htmls.length} HTML pages; ${refs} internal references; ${search.length} search entries. No missing assets or internal targets.`);

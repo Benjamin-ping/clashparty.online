@@ -66,6 +66,14 @@ npm run dev
 
 参考：https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule
 
+## SEO 与 IndexNow
+
+每页包含规范网址、描述、Open Graph、Twitter 分享信息、WebSite / WebPage 或 TechArticle 结构化数据，以及内页面包屑结构化数据。404 标记 noindex。sitemap 的 lastmod 根据页面正文、标题和描述的内容指纹维护，保存在 `content/page-metadata.json`；无内容变化的重复构建不会刷新日期。
+
+IndexNow 配置位于 `content/indexnow.json`，构建时生成根目录验证文件（该文件按协议公开）。`npm run deploy` 和 `upload.bat` 在发布成功后验证线上密钥文件及 sitemap，再向 IndexNow 提交 sitemap 中的规范页面。每日同步无内容变化时跳过通知；手动触发可重新提交。HTTP 200 表示接收成功，202 表示已接收、密钥验证待处理，均不保证立即收录。
+
+提交失败不会撤销已发布的网站；处理报错后执行 `npm run indexnow` 重试。`npm run indexnow -- --dry-run` 只检查地址，不发送请求。Google 继续通过已提交的 sitemap 发现页面，本站没有使用已废弃的 sitemap ping 接口。
+
 ## 当前限制
 
 入门教程仅保留 Windows 11、Windows 7、Linux、Mac 四篇；Mac 芯片差异和 Linux 包格式在各自文章内说明。Windows 11 已接入维护者截图；Mac 有两张旧版 Mac 图和两张明确标注的 Windows 状态示意。Windows 7 已补齐 PowerShell 提示、WMF 下载、启动、订阅与节点测速图，并附微软官方更新步骤。仅 Windows 11 入门教程保留 GLOBAL 测试说明，其他平台可按功能手册操作。安装与连接的进一步实机核验仍需补充，特别是 CentOS 具体版本兼容性。教程版本标记是编写基准，不代表已经执行全平台测试。机场推荐目前为 99吧与 FlyBit，资料统一维护在 content/services.json，已按用户指定页面整理套餐并确认跳转入口；价格以服务商结算页为准。
