@@ -15,6 +15,14 @@ npm run dev
 
 预览地址为 `http://127.0.0.1:4173`。修改内容后重新运行 build，刷新预览即可。所有页面在构建时生成完整 HTML，阅读和导航不依赖 JavaScript；搜索、下载筛选和图片放大使用少量浏览器脚本。
 
+## Windows 一键上传
+
+修改代码后，双击根目录的 `upload.bat`。它会先获取 GitHub 最新代码，临时保存并恢复本地修改，再安装依赖、测试、构建、检查、提交和推送，最后发布到 Cloudflare。提交说明自动包含时间。需要已安装 Git、Node.js，并已登录 GitHub 和 Cloudflare。
+
+出现冲突或错误时会停止，窗口保留错误信息。本地修改的暂存备份会保留，先处理冲突再继续，不能直接删除备份。所有未被 `.gitignore` 排除的修改都会提交，请勿将密钥或私人文件放入仓库。
+
+只上传 GitHub、不立即发布网站时，在项目目录运行 `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/upload.ps1 -SkipDeploy`。
+
 ## 主要文件
 
 - `content/articles.mjs`：平台教程、功能手册、原理、故障排查。
