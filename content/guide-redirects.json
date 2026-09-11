@@ -1,0 +1,7 @@
+{
+  "/guide/mac-apple/": "/guide/mac/",
+  "/guide/mac-intel/": "/guide/mac/",
+  "/guide/linux-deb/": "/guide/linux/",
+  "/guide/linux-rpm/": "/guide/linux/",
+  "/guide/linux-arch/": "/guide/linux/"
+}

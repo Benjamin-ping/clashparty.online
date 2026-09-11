@@ -1,0 +1,14 @@
+dist/
+node_modules/
+.env
+.env.*
+!.env.example
+.wrangler/
+contact-sheet.jpg
+content/upstream-releases.json
+*.log
+__pycache__/
+
+.dev.vars*
+!.dev.vars.example
+.deploy-tools/

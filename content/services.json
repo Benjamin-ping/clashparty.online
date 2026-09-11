@@ -1,0 +1,37 @@
+[
+  {
+    "slug":"99ba","logo":"/assets/services/99ba.png","name":"99吧","label":"低预算入门","price":"9.9","allowance":"70GB / 月",
+    "description":"从小额月付开始，也可以选择不限时流量包作为备用。",
+    "url":"https://99ba.net/#/register?code=8ObzVHbL","source":"https://zhaotizi.pro/services/99ba","sourceDate":"2026-09-02","checkedAt":"2026-09-11","coupon":"2026-99",
+    "trial":"1GB / 1 天","devices":"最多 99 台设备，不限制同时在线","routes":"IPLC 专线 + BGP 中转","protocol":"VLESS","nodes":"52 个（参考资料）","billing":"全节点 1 倍率；周期套餐按月重置，提前重置需联系客服。","refund":"不支持退款","payment":"微信、支付宝",
+    "tags":["小额月付","不限时流量包","1 倍率"],
+    "suitable":["想先以较低月付预算开始使用。","每月流量需求不高，或需要一份备用订阅。","希望在多台设备上使用，并愿意先验证自己的网络。"],
+    "notes":["先用试用流量测试自己的网络，再决定购买哪个套餐。","不限时是套餐流量的有效期规则，不等于服务永远可用；流量用完需另购。","年付套餐是一次支付全年费用，不是每月扣款。优惠是否生效要在付款前确认。"],
+    "plans":[
+      {"name":"九九特惠月套餐","price":"¥9.9 / 月","traffic":"70GB / 月","period":"月付","note":"适合先小额尝试"},
+      {"name":"全年特惠套餐","price":"¥99 / 年","traffic":"66GB / 月","period":"年付","note":"一次支付全年费用；优惠以结算页为准"},
+      {"name":"星耀 VIP","price":"月付 ¥12.9 · 季付 ¥36.9 · 年付 ¥139.9","traffic":"99GB / 月","period":"多周期","note":"周期套餐按月重置流量"},
+      {"name":"至尊 SVIP","price":"¥69.9","traffic":"222GB 总流量","period":"不限时","note":"一次性流量包，用完为止"},
+      {"name":"皇冠 SVIP","price":"¥139.9","traffic":"555GB 总流量","period":"不限时","note":"一次性流量包，用完为止"}
+    ]
+  },
+  {
+    "slug":"flybit","logo":"/assets/services/flybit.png","name":"FlyBit","label":"多设备灵活使用","price":"15","allowance":"128GB / 月",
+    "description":"周期套餐与不限时流量包按需选择，公开说明不限制设备数量。",
+    "url":"https://goflybit.com/#/register?code=ckrpv0zT","source":"https://zhaotizi.pro/services/flybit","sourceDate":"2026-09-02","checkedAt":"2026-09-11","coupon":"flybit",
+    "trial":"2GB / 1 天","devices":"不限设备数量，不限制同时在线","routes":"IPLC 专线","protocol":"VLESS","nodes":"75 个（参考资料）","billing":"常规节点 1 倍率，部分直连节点 0.3 倍率；周期套餐按月重置，可购买流量重置包。","refund":"不支持退款","payment":"微信、支付宝",
+    "tags":["不限设备数量","不限时流量包","多档流量"],
+    "suitable":["想在多台设备上使用同一订阅。","需要从 128GB 到更高流量档位中选择。","希望在周期套餐与不限时流量包之间灵活选择。"],
+    "notes":["先使用试用或短期套餐验证常用网站与本地网络。","部分直连节点的流量倍率与常规节点不同，使用前查看节点标注。","不限设备不代表带宽无限；实际体验仍受节点负载和本地网络影响。"],
+    "plans":[
+      {"name":"VIP1","price":"月付 ¥15 · 季付 ¥42 · 半年 ¥75 · 年付 ¥148","traffic":"128GB / 月","period":"多周期","note":"周期套餐按月重置流量"},
+      {"name":"VIP2","price":"月付 ¥22 · 季付 ¥60 · 半年 ¥110 · 年付 ¥216","traffic":"192GB / 月","period":"多周期","note":"周期套餐按月重置流量"},
+      {"name":"VIP3","price":"月付 ¥28 · 季付 ¥80 · 半年 ¥140 · 年付 ¥268","traffic":"256GB / 月","period":"多周期","note":"周期套餐按月重置流量"},
+      {"name":"VIP4","price":"月付 ¥52 · 季付 ¥148 · 半年 ¥260 · 年付 ¥498","traffic":"512GB / 月","period":"多周期","note":"周期套餐按月重置流量"},
+      {"name":"不限时 128G","price":"¥36","traffic":"128GB 总流量","period":"不限时","note":"一次性流量包"},
+      {"name":"不限时 256G","price":"¥68","traffic":"256GB 总流量","period":"不限时","note":"一次性流量包"},
+      {"name":"不限时 512G","price":"¥128","traffic":"512GB 总流量","period":"不限时","note":"一次性流量包"},
+      {"name":"不限时 1024G","price":"¥238","traffic":"1024GB 总流量","period":"不限时","note":"一次性流量包"}
+    ]
+  }
+]
