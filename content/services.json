@@ -2,7 +2,7 @@
   {
     "slug":"99ba","logo":"/assets/services/99ba.png","name":"99吧","label":"低预算入门","price":"9.9","allowance":"70GB / 月",
     "description":"从小额月付开始，也可以选择不限时流量包作为备用。",
-    "url":"https://99ba.net/#/register?code=8ObzVHbL","source":"https://zhaotizi.pro/services/99ba","sourceDate":"2026-09-02","checkedAt":"2026-09-11","coupon":"2026-99",
+    "url":"https://99ba.net/#/register?code=nmRLD9kD","source":"https://zhaotizi.pro/services/99ba","sourceDate":"2026-09-02","checkedAt":"2026-09-11","coupon":"2026-99",
     "trial":"1GB / 1 天","devices":"最多 99 台设备，不限制同时在线","routes":"IPLC 专线 + BGP 中转","protocol":"VLESS","nodes":"52 个（参考资料）","billing":"全节点 1 倍率；周期套餐按月重置，提前重置需联系客服。","refund":"不支持退款","payment":"微信、支付宝",
     "tags":["小额月付","不限时流量包","1 倍率"],
     "suitable":["想先以较低月付预算开始使用。","每月流量需求不高，或需要一份备用订阅。","希望在多台设备上使用，并愿意先验证自己的网络。"],
