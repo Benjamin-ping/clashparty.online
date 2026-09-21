@@ -1,7 +1,7 @@
 {
   "/": {
-    "hash": "546b06807d1deaf1439220329bf856b963a5f4bf0ba18414dbac9eeccea616aa",
-    "lastmod": "2026-09-11T09:07:02.600Z"
+    "hash": "b48db72b9a0224414377396f93ea2accf77ec33017647079bf625d048a3841cc",
+    "lastmod": "2026-09-21T05:09:20.688Z"
   },
   "/guide/": {
     "hash": "03b8811c0a9a91199abf3b1fa27cce64b6fbc927536b90d0bcd5c989fec05ec3",
@@ -168,16 +168,20 @@
     "lastmod": "2026-09-11T09:07:02.663Z"
   },
   "/manual/release-features/": {
-    "hash": "3f8cf6d7f0d86cd16b0b36c960b4078e94e82fb476273ec2d20e5bbc9b1087d6",
-    "lastmod": "2026-09-11T09:07:02.666Z"
+    "hash": "e0954695c46bacaf85b9db89d16234152e5ec2427f4e42b5ec74547d3f42b279",
+    "lastmod": "2026-09-21T05:09:20.709Z"
   },
   "/download/": {
-    "hash": "ffc75e7230e9898f2b9587354c679409782c31697907874606766e00e9d73b57",
-    "lastmod": "2026-09-11T09:07:02.670Z"
+    "hash": "eadb6661cf662bd32e57a6effdb7258cffd994a4457500ff823384395b9d7c59",
+    "lastmod": "2026-09-21T05:09:20.712Z"
   },
   "/changelog/": {
-    "hash": "6eceb03df6f7115a30b21a275d1ba9882093451950e8d3898b4d181618edab94",
-    "lastmod": "2026-09-11T09:07:02.674Z"
+    "hash": "e7afa83876f567a46dcbe826065cc606cd3073043e417dcef5f9e644ea84fc13",
+    "lastmod": "2026-09-21T05:09:20.715Z"
+  },
+  "/changelog/2.0.3/": {
+    "hash": "603bb8891935875eee3dbe404fbc9163a45b467804dfee2ceba2d5149e5dadaa",
+    "lastmod": "2026-09-21T05:09:20.715Z"
   },
   "/changelog/2.0.2/": {
     "hash": "d7717861182eadb466e813010662e4cdc0b27c5c51856ed9e1c0939f0421a9ef",

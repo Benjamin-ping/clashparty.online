@@ -1,5 +1,280 @@
 [
   {
+    "tag": "v2.0.3",
+    "version": "2.0.3",
+    "date": "2026-09-20T13:56:08Z",
+    "prerelease": false,
+    "url": "https://github.com/mihomo-party-org/clash-party/releases/tag/v2.0.3",
+    "body": "# 2.0.3\n\n## 新功能\n\n- 新增订阅 DNS 覆写保护，避免意外覆盖自定义解析配置\n- Smart 内核新增模型状态、手动下载及自动更新设置\n- 支持按 WiFi SSID 自动切换订阅，macOS 使用事件驱动检测\n- 新增自定义 GitHub 下载代理和覆写全局开关快捷入口\n- 机场插件支持多网关、备用发现源、签名发现文档、网关说明及网络请求自动回退\n\n## 性能优化\n\n- 优化应用启动流程，首屏完成后再执行其余初始化\n- 合并连接列表高频更新，页面不可见时暂停处理\n- 修复连接页面、IPC 监听器及 Monaco 编辑器相关资源泄漏\n\n## 修复\n\n- 修复恶意 `rule-providers` 配置可能执行任意命令的安全问题\n- 修复内核下载校验、解压失败及 macOS 路径含空格时的权限问题\n- 修复 Smart 组生成、设置热重载及模型重复下载问题\n- 修复 PAC、Gist、悬浮窗、覆写拖拽与并发读写等稳定性问题\n- 修复规则编辑器、WebDAV、流量表格及配置读写问题\n- 修复系统唤醒后内核、TUN 或系统代理失效，以及内核启动失败提示异常的问题\n- 修复 macOS 开机自启、内核残留、托盘状态及安装包公证票据问题\n- 修复 Windows WiFi 权限频繁请求、ARM64 安装包及 Windows 8/8.1 系统代理兼容问题\n- 修复代理组搜索中文输入中断、TUN 重复重建及代理列表高度异常问题\n- 修复订阅流量大数值解析、Sub-Store 回退路径及 Emoji 字体下载问题\n- 提升机场插件的订阅校验、自动更新、设备回收、凭据保护、超时和并发安全性\n\n## 其他\n\n- 重写流量统计存储并自动迁移历史数据\n- CI 新增格式、lint、类型检查及单元测试\n- 更新机场服务端对接指南，并移除 `https-proxy-agent` 依赖",
+    "changes": [
+      "新增订阅 DNS 覆写保护，避免意外覆盖自定义解析配置",
+      "Smart 内核新增模型状态、手动下载及自动更新设置",
+      "支持按 WiFi SSID 自动切换订阅，macOS 使用事件驱动检测",
+      "新增自定义 GitHub 下载代理和覆写全局开关快捷入口",
+      "机场插件支持多网关、备用发现源、签名发现文档、网关说明及网络请求自动回退",
+      "优化应用启动流程，首屏完成后再执行其余初始化",
+      "合并连接列表高频更新，页面不可见时暂停处理",
+      "修复连接页面、IPC 监听器及 Monaco 编辑器相关资源泄漏",
+      "修复恶意 rule-providers 配置可能执行任意命令的安全问题",
+      "修复内核下载校验、解压失败及 macOS 路径含空格时的权限问题",
+      "修复 Smart 组生成、设置热重载及模型重复下载问题",
+      "修复 PAC、Gist、悬浮窗、覆写拖拽与并发读写等稳定性问题",
+      "修复规则编辑器、WebDAV、流量表格及配置读写问题",
+      "修复系统唤醒后内核、TUN 或系统代理失效，以及内核启动失败提示异常的问题",
+      "修复 macOS 开机自启、内核残留、托盘状态及安装包公证票据问题",
+      "修复 Windows WiFi 权限频繁请求、ARM64 安装包及 Windows 8/8.1 系统代理兼容问题",
+      "修复代理组搜索中文输入中断、TUN 重复重建及代理列表高度异常问题",
+      "修复订阅流量大数值解析、Sub-Store 回退路径及 Emoji 字体下载问题",
+      "提升机场插件的订阅校验、自动更新、设备回收、凭据保护、超时和并发安全性",
+      "重写流量统计存储并自动迁移历史数据",
+      "CI 新增格式、lint、类型检查及单元测试",
+      "更新机场服务端对接指南，并移除 https-proxy-agent 依赖"
+    ],
+    "assets": [
+      {
+        "name": "clash-party-catalina-2.0.3-arm64.pkg",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-catalina-2.0.3-arm64.pkg",
+        "size": 220851340,
+        "digest": "sha256:406bd8d06d9d965c3009f6bac8aee4ad8d7ff94820c8667a63095f0eeb683099"
+      },
+      {
+        "name": "clash-party-catalina-2.0.3-arm64.pkg.sha256",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-catalina-2.0.3-arm64.pkg.sha256",
+        "size": 64,
+        "digest": "sha256:de30afe65b78e0bac174de429b125b5366599eb988070a651e0d0ca9a7bd90a0"
+      },
+      {
+        "name": "clash-party-catalina-2.0.3-x64.pkg",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-catalina-2.0.3-x64.pkg",
+        "size": 238961554,
+        "digest": "sha256:a825ffc7b3f53f31d0abf8ecfa4413f95ecfdea40319b9757a6229954f7c1ff1"
+      },
+      {
+        "name": "clash-party-catalina-2.0.3-x64.pkg.sha256",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-catalina-2.0.3-x64.pkg.sha256",
+        "size": 64,
+        "digest": "sha256:4e36b4a5a13fbf2465cb1c2f6c2b3fe33686ba6d9b5d4bf919d8bc401d7be5ff"
+      },
+      {
+        "name": "clash-party-linux-2.0.3-aarch64.pkg.tar.zst",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-linux-2.0.3-aarch64.pkg.tar.zst",
+        "size": 236403034,
+        "digest": "sha256:476a81237f0177a4423c1d644f089d84b5e1c0a2ded22891fb623b4fa9861729"
+      },
+      {
+        "name": "clash-party-linux-2.0.3-aarch64.pkg.tar.zst.sha256",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-linux-2.0.3-aarch64.pkg.tar.zst.sha256",
+        "size": 64,
+        "digest": "sha256:0ae991f78a4fce6e7c2206e60b7655f1a6cb5c6ce30ef16e5d348060df591e19"
+      },
+      {
+        "name": "clash-party-linux-2.0.3-aarch64.rpm",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-linux-2.0.3-aarch64.rpm",
+        "size": 151745881,
+        "digest": "sha256:21c3d6cd0a35ae89e50fc78ce376beadaa28731397de25a8976e68e66ac32c20"
+      },
+      {
+        "name": "clash-party-linux-2.0.3-aarch64.rpm.sha256",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-linux-2.0.3-aarch64.rpm.sha256",
+        "size": 64,
+        "digest": "sha256:26c9db7cd35398cb3fcdd2596be50e516e899b8f24d2eba7d9555bd7403fd12d"
+      },
+      {
+        "name": "clash-party-linux-2.0.3-amd64.deb",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-linux-2.0.3-amd64.deb",
+        "size": 201959128,
+        "digest": "sha256:a45ecdecba85b6f3662851a6013d31874ac5e0f91df855dc68b39aec4b2c463d"
+      },
+      {
+        "name": "clash-party-linux-2.0.3-amd64.deb.sha256",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-linux-2.0.3-amd64.deb.sha256",
+        "size": 64,
+        "digest": "sha256:75def27de1f83e496d6f57e58b282d3a401950e7c5147648973a9b26a40668f2"
+      },
+      {
+        "name": "clash-party-linux-2.0.3-arm64.deb",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-linux-2.0.3-arm64.deb",
+        "size": 187790860,
+        "digest": "sha256:9d7d4bb9fb168f4dc5878df0c79ebd949190c52e191711d90fbc1a610af797d9"
+      },
+      {
+        "name": "clash-party-linux-2.0.3-arm64.deb.sha256",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-linux-2.0.3-arm64.deb.sha256",
+        "size": 64,
+        "digest": "sha256:8f1df9754ae92ea3d03bcff6b37d604514e5c58e9544375140faef804a0f8e10"
+      },
+      {
+        "name": "clash-party-linux-2.0.3-x64.pkg.tar.zst",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-linux-2.0.3-x64.pkg.tar.zst",
+        "size": 244115336,
+        "digest": "sha256:9252cfe92389bc25a25f24cbf03d1332e06ff4941ca1ad4345bbcb0a946b1560"
+      },
+      {
+        "name": "clash-party-linux-2.0.3-x64.pkg.tar.zst.sha256",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-linux-2.0.3-x64.pkg.tar.zst.sha256",
+        "size": 64,
+        "digest": "sha256:9ab93014d72de9c6bd26ef0c9ed286566d20da07e645b0a7449253a46f4a0940"
+      },
+      {
+        "name": "clash-party-linux-2.0.3-x86_64.rpm",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-linux-2.0.3-x86_64.rpm",
+        "size": 165008181,
+        "digest": "sha256:f4366602e7398a7a8849ec2bc85e1c1e4340bf41c67f4ec4a17fcf418a1e048d"
+      },
+      {
+        "name": "clash-party-linux-2.0.3-x86_64.rpm.sha256",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-linux-2.0.3-x86_64.rpm.sha256",
+        "size": 64,
+        "digest": "sha256:ac25d0d8123dae36f174966b209e55151bdf14f56f6d645c30be4a19bfd6ae4e"
+      },
+      {
+        "name": "clash-party-macos-2.0.3-arm64.pkg",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-macos-2.0.3-arm64.pkg",
+        "size": 244121821,
+        "digest": "sha256:e4699bb29ec60810553c9358b1744538476251d78a978119ce2702a040210545"
+      },
+      {
+        "name": "clash-party-macos-2.0.3-arm64.pkg.sha256",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-macos-2.0.3-arm64.pkg.sha256",
+        "size": 64,
+        "digest": "sha256:92a293bfa993f41e0414ce0b12037f63f01502f5aaf45cef8419a66a3cc7357a"
+      },
+      {
+        "name": "clash-party-macos-2.0.3-x64.pkg",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-macos-2.0.3-x64.pkg",
+        "size": 262351524,
+        "digest": "sha256:3233641f78cc0424ad54606946ce442cb2c4c823d491f5bc96d16f87f898cc0a"
+      },
+      {
+        "name": "clash-party-macos-2.0.3-x64.pkg.sha256",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-macos-2.0.3-x64.pkg.sha256",
+        "size": 64,
+        "digest": "sha256:af0667a4d67721ee806ebf5393f8a27a79cce840f3f2a35184baf0f9f496d13a"
+      },
+      {
+        "name": "clash-party-win7-2.0.3-ia32-portable.7z",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-win7-2.0.3-ia32-portable.7z",
+        "size": 135171212,
+        "digest": "sha256:5e8e0fdb9c411895ec4cbd73593587655a7ff3b8bcaf1a122518c27cbf04e4ae"
+      },
+      {
+        "name": "clash-party-win7-2.0.3-ia32-portable.7z.sha256",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-win7-2.0.3-ia32-portable.7z.sha256",
+        "size": 64,
+        "digest": "sha256:53939eaef5eb3157fa86f77d1472a59ffb27acf65d6dc3805f8416df7890f8ea"
+      },
+      {
+        "name": "clash-party-win7-2.0.3-ia32-setup.exe",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-win7-2.0.3-ia32-setup.exe",
+        "size": 162854414,
+        "digest": "sha256:dc25d336f2bfd028495749fa10fa0e0c6ec62b9219e2362fb72a354b7db73101"
+      },
+      {
+        "name": "clash-party-win7-2.0.3-ia32-setup.exe.sha256",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-win7-2.0.3-ia32-setup.exe.sha256",
+        "size": 64,
+        "digest": "sha256:b8e4dd4a9beb71944eae14998c8e45e664bdee4e923862209a00dff1d1bd3dee"
+      },
+      {
+        "name": "clash-party-win7-2.0.3-x64-portable.7z",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-win7-2.0.3-x64-portable.7z",
+        "size": 144220748,
+        "digest": "sha256:7628d5d2da24ba18aca0b2c5d12027673b4e00b08c20e868a0927aeac326a296"
+      },
+      {
+        "name": "clash-party-win7-2.0.3-x64-portable.7z.sha256",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-win7-2.0.3-x64-portable.7z.sha256",
+        "size": 64,
+        "digest": "sha256:8a602b14109b36d7be1e1a9634982a458160ab144865d405dde39b321ea8dc40"
+      },
+      {
+        "name": "clash-party-win7-2.0.3-x64-setup.exe",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-win7-2.0.3-x64-setup.exe",
+        "size": 170405716,
+        "digest": "sha256:190474e08cd8a0a6db180be745fa6ad420aecc3c5468dc2ffd55fe869a4072f5"
+      },
+      {
+        "name": "clash-party-win7-2.0.3-x64-setup.exe.sha256",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-win7-2.0.3-x64-setup.exe.sha256",
+        "size": 64,
+        "digest": "sha256:af528f4f7168d28f0cd546ee96959123c0416f32d40d99bd4f9bbd9060be460e"
+      },
+      {
+        "name": "clash-party-windows-2.0.3-arm64-portable.7z",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-windows-2.0.3-arm64-portable.7z",
+        "size": 146988630,
+        "digest": "sha256:e672babe02563c2cda97e62c93e6186e79794778a4488d0357b7b22a8a0a6dbb"
+      },
+      {
+        "name": "clash-party-windows-2.0.3-arm64-portable.7z.sha256",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-windows-2.0.3-arm64-portable.7z.sha256",
+        "size": 64,
+        "digest": "sha256:171dccd713780413280dcfab32370809169bda99456b672f1ee69afd73fd1c85"
+      },
+      {
+        "name": "clash-party-windows-2.0.3-arm64-setup.exe",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-windows-2.0.3-arm64-setup.exe",
+        "size": 195200345,
+        "digest": "sha256:cc1f978668debb08c71422642d9ea7562b0929a5c3cc59350ac3f48af96a3d4d"
+      },
+      {
+        "name": "clash-party-windows-2.0.3-arm64-setup.exe.sha256",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-windows-2.0.3-arm64-setup.exe.sha256",
+        "size": 64,
+        "digest": "sha256:325a8b865fa69abe8feecc96b17147454342aaa4ccc3a39eaee9db8cd0c7fc3a"
+      },
+      {
+        "name": "clash-party-windows-2.0.3-ia32-portable.7z",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-windows-2.0.3-ia32-portable.7z",
+        "size": 158448805,
+        "digest": "sha256:fc404ad08882b6737454f0e177cc1f24881fd5e0561bcd4ecc3916e21d11f601"
+      },
+      {
+        "name": "clash-party-windows-2.0.3-ia32-portable.7z.sha256",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-windows-2.0.3-ia32-portable.7z.sha256",
+        "size": 64,
+        "digest": "sha256:257c2eaa6324f8621624f8adec95a5ec8830794db52c7ea1758986cb7001b5dd"
+      },
+      {
+        "name": "clash-party-windows-2.0.3-ia32-setup.exe",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-windows-2.0.3-ia32-setup.exe",
+        "size": 191068860,
+        "digest": "sha256:5c107b6f51ee2b4cd8cfc7c60088a4a1b9fe995340809d56fc7119e6d59c7339"
+      },
+      {
+        "name": "clash-party-windows-2.0.3-ia32-setup.exe.sha256",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-windows-2.0.3-ia32-setup.exe.sha256",
+        "size": 64,
+        "digest": "sha256:c70b6e518135df2ec404f8479e0d8c2b0ae2cfed2b20a863e6e2486249a6fabb"
+      },
+      {
+        "name": "clash-party-windows-2.0.3-x64-portable.7z",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-windows-2.0.3-x64-portable.7z",
+        "size": 175622326,
+        "digest": "sha256:3351ea707f9bf28508c5335b54b60adb7264735614bf3911fb172e9ad34cf913"
+      },
+      {
+        "name": "clash-party-windows-2.0.3-x64-portable.7z.sha256",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-windows-2.0.3-x64-portable.7z.sha256",
+        "size": 64,
+        "digest": "sha256:846663f80c625036924b0ac85e59075a13b32c13ed890295e1fea48d89dcc1dc"
+      },
+      {
+        "name": "clash-party-windows-2.0.3-x64-setup.exe",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-windows-2.0.3-x64-setup.exe",
+        "size": 208253928,
+        "digest": "sha256:bcb3f642124aa85574d47c5242c15803d0eefbaf0240f545ded31c70a1e0c3db"
+      },
+      {
+        "name": "clash-party-windows-2.0.3-x64-setup.exe.sha256",
+        "url": "https://github.com/mihomo-party-org/clash-party/releases/download/v2.0.3/clash-party-windows-2.0.3-x64-setup.exe.sha256",
+        "size": 64,
+        "digest": "sha256:b3b7497a7a163d5178b3301c94c7157efcea0d7d087d730bf5ce4056bb2b2674"
+      }
+    ],
+    "hash": "01de5bf9c137f32f759c328969937d688faeb7900677fe906644ad17022bd0a8"
+  },
+  {
     "tag": "v2.0.2",
     "version": "2.0.2",
     "date": "2026-08-14T15:07:21Z",
